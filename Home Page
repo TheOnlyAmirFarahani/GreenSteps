@@ -19,12 +19,12 @@
     <main>
         <h1>Welcome to GreenSteps!</h1>
         <section>
-            <h2>Make Every Step Count for the Planet and Your Health</h2>
+            <h3>Make Every Step Count for the Planet and Your Health</h3>
             <p>GreenSteps is your personal sustainability and health tracker, designed to help you make informed choices about your daily travel habits. By logging your travel activities, GreenSteps calculates the carbon emissions you’ve saved and the calories you’ve burned, turning your everyday movements into measurable environmental and fitness achievements.</p>
         </section>
         
         <section>
-            <h2>Why Use GreenSteps?</h2>
+            <h3>Why Use GreenSteps?</h3>
             <ul>
                 <li>Track Your Environmental Impact: See how much CO₂ you save by choosing eco-friendly transportation options like walking, biking, or public transit.</li>
                 <li>Monitor Your Health Benefits: Calculate the calories you burn with every step you take.</li>
@@ -32,7 +32,7 @@
                 <li>Learn Sustainable Practices: Get tips and resources on how to reduce your carbon footprint.</li>
             </ul>
             
-            <h2>How It Works</h2>
+            <h3>How It Works</h3>
             <ol>
                 <li>Log Your Travel: Enter your travel method, distance, and duration.</li>
                 <li>See Instant Results: Get real-time feedback on emissions saved and calories burned.</li>
@@ -42,7 +42,7 @@
         </section>
         
         <section>
-            <h2>Start Your Journey Today!</h2>
+            <h3>Start Your Journey Today!</h3>
             <p>Every step you take can make a difference—for the planet and for yourself. Join GreenSteps and start tracking your impact now!</p>
         </section>
     </main>
