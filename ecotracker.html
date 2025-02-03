@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EcoTracker</title>
+</head>
+<body>
+    <header id="main-header">
+        <h1>EcoTracker</h1>
+        <nav class="main-nav">
+            <a class="nav-ink" href="index.html">Home</a>
+            <a class="nav-ink" href="about.html">About</a>
+            <a class="nav-ink" href="contact.html">Contact Us</a>
+            <a class="nav-ink" href="tippsresources.html">Tips & Resources</a>
+            <a class="nav-ink" href="faq.html">FAQ</a>
+            <a class="nav-ink" href="achievements.html">Achievements</a>
+            <a class="nav-ink" href="ecotracker.html">Ecotracker</a>
+            <a class="nav-ink" href="globalwarming.html">Global Warming</a>
+        </nav>
+    </header>
+    <main>
+        <section class="ecotracker-form-section">
+            <h2>Track Your Travel</h2>
+            <form id="ecoTrackerForm">
+                <label for="distance">Distance Traveled in kilometers:</label>
+                <input type="number" id="distance" required>
+                <label for="transport">Mode of Transport:</label>
+                <select id="transport">
+                    <option value="walk">Walking</option>
+                    <option value="bike">Biking</option>
+                    <option value="bus">Public Transport</option>
+                    <option value="car">Car</option>
+                    <option value="airplane">Airplane</option>
+                </select>
+                <button type="submit">Calculate</button>
+            </form>
+            <p id="result"><strong>10</strong> Kilograms of emissions</p>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <p>&copy; 2025 GreenSteps</p>
+    </footer>
+</body>
+</html>
