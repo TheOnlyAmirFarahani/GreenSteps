@@ -4,129 +4,184 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color: #2e7d32;
+  --secondary-color: #66bb6a;
+  --accent-color: #c8e6c9;
+  --text-color: #333333;
+  --background-color: #f5f5f5;
+  --white: #ffffff;
+  --nav-background: #1b5e20;
+}
+
 body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
   line-height: 1.6;
-  background-color: #f4fef4; /* Light greenish background */
-  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-header {
-  background-color: #2e8b57; /* Sea Green */
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
+#main-header {
+  background-color: var(--nav-background);
+  padding: 1rem 0;
 }
 
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+#main-nav {
+  width: 90%;
+  margin: 0 auto;
 }
 
-nav {
-  background-color: #22543d; /* Darker Green */
+.nav-list {
   display: flex;
   justify-content: center;
+  list-style: none;
 }
 
-nav a {
-  color: #ffffff;
+.nav-item {
+  margin: 0 1rem;
+}
+
+.nav-item a {
+  color: var(--white);
   text-decoration: none;
-  padding: 15px 20px;
-  display: inline-block;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-nav a:hover {
-  background-color: #38a169; /* Lighter Green */
-  transition: background-color 0.3s ease;
+.nav-item a:hover,
+.nav-item a:focus {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  border-radius: 4px;
 }
 
 main {
-  padding: 20px;
+  flex-grow: 1;
+  width: 90%;
+  max-width: 1000px;
+  margin: 2rem auto;
 }
 
-section {
-  margin-bottom: 40px;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-  color: #2e8b57;
-  margin-bottom: 15px;
-}
-
-p {
-  margin-bottom: 15px;
-}
-
-button {
-  background-color: #38a169; /* Lighter Green */
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #2f855a;
-  transition: background-color 0.3s ease;
-}
-
-footer {
-  background-color: #2e8b57;
-  color: #fff;
+.page-title {
+  font-size: 2.5rem;
+  color: var(--primary-color);
   text-align: center;
-  padding: 20px;
-  margin-top: 40px;
+  margin-bottom: 2rem;
 }
 
-/* Images */
-img {
-  max-width: 100%;
-  border-radius: 10px;
+.brand-name {
+  color: var(--secondary-color);
 }
 
-/* Form styling */
-form {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
+.content-section {
+  background-color: var(--white);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"],
-textarea {
+.section-title {
+  font-size: 1.75rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.section-text {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.benefits-list,
+.features-list,
+.sources-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.benefit-item,
+.feature-item,
+.source-item {
+  margin-bottom: 0.75rem;
+}
+
+.article-title {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.author,
+.date {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.quote {
+  font-style: italic;
+  color: #666;
+  border-left: 4px solid var(--secondary-color);
+  padding-left: 1rem;
+  margin: 1rem 0;
+}
+
+.image-container {
+  margin: 1.5rem 0;
+}
+
+.image-container img {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
-input[type="submit"] {
-  background-color: #38a169;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
+.caption {
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+  margin-top: 0.5rem;
 }
 
-input[type="submit"]:hover {
-  background-color: #2f855a;
+#main-footer {
+  background-color: var(--nav-background);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem 0;
 }
 
-/* Responsive Design */
+#main-footer a {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+#sources {
+  padding: 1rem;
+}
+
+.sources-title {
+  font-size: 1.25rem;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
 @media (max-width: 768px) {
-  nav {
+  .nav-list {
     flex-direction: column;
   }
 
-  nav a {
-    padding: 10px;
+  .nav-item {
+    margin: 0.5rem 0;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
   }
 }
