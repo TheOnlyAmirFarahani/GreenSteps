@@ -10,16 +10,18 @@ body {
 header {
     background-color: #4CAF50;
     color: white;
-    padding: 1rem 0;
+    padding: 1rem;
     text-align: center;
 }
 
 header h1 {
     margin: 0;
+    font-size: 1.8rem;
 }
 
 nav.main-nav {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     background-color: #333;
     padding: 0.5rem 0;
@@ -28,7 +30,7 @@ nav.main-nav {
 nav.main-nav a {
     color: white;
     text-decoration: none;
-    margin: 0 1rem;
+    margin: 0.5rem;
     font-weight: bold;
 }
 
@@ -37,23 +39,24 @@ nav.main-nav a:hover {
 }
 
 main {
-    padding: 2rem;
+    padding: 1rem;
 }
 
 footer {
     background-color: #333;
-    color: rgb(255, 255, 255);
+    color: #fff;
     text-align: center;
     padding: 1rem 0;
     margin-top: 2rem;
 }
 
+h1 {
+    color: #000;
+    font-size: 2rem;
+}
+
 h2, h3 {
     color: #4CAF50;
-}
-h1 {
-    color: #000000;
-
 }
 
 p {
@@ -72,6 +75,7 @@ ul li {
     padding: 1rem;
     border-left: 5px solid #4CAF50;
 }
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -126,7 +130,7 @@ table th {
 }
 
 .quote-div {
-    background-color: #ffffff;
+    background-color: #fff;
     border-left: 5px solid #4CAF50;
     padding: 1.5rem;
     margin: 2rem 0;
@@ -157,7 +161,7 @@ table th {
 .global-warming-article {
     max-width: 800px;
     margin: 0 auto;
-    background-color: #ffffff;
+    background-color: #fff;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -194,8 +198,6 @@ table th {
     font-style: italic;
     font-size: 1.1rem;
     color: #444;
-    margin: 0;
-    transition: all 0.3s ease;
 }
 
 .global-warming-article .quote-div:hover {
@@ -264,4 +266,65 @@ table th {
 
 .global-warming-article .source-item a:hover {
     text-decoration: underline;
+}
+
+@media (min-width: 600px) {
+    header h1 {
+        font-size: 2.4rem;
+    }
+
+    nav.main-nav a {
+        margin: 0 1rem;
+    }
+
+    main {
+        padding: 2rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    .global-warming-article h1.article-title {
+        font-size: 2.4rem;
+    }
+
+    .global-warming-article .issue-text {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    nav.main-nav {
+        justify-content: flex-start;
+        padding: 1rem 3rem;
+    }
+
+    nav.main-nav a {
+        margin: 0 2rem;
+    }
+
+    main {
+        padding: 3rem 5rem;
+    }
+
+    .global-warming-article {
+        padding: 3rem;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    .global-warming-article h1.article-title {
+        font-size: 3rem;
+    }
+
+    .quote-div blockquote {
+        font-size: 1.3rem;
+    }
+
+    .global-warming-article .image-container img {
+        width: 80%;
+    }
 }
