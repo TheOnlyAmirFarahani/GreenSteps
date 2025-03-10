@@ -1,0 +1,126 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav.main-nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 0.5rem 0;
+}
+
+nav.main-nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+}
+
+nav.main-nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 2rem;
+}
+
+footer {
+    background-color: #333;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+h2, h3 {
+    color: #4CAF50;
+}
+h1 {
+    color: #000000;
+
+}
+
+p {
+    font-size: 1rem;
+    color: #555;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: #fff;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border-left: 5px solid #4CAF50;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+table th, table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#faq-log-travel,
+#faq-global-warming,
+#faq-Contact-Us {
+    background-color: #e8f5e9;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 1rem 0;
+}
+
+#faq-log-travel strong,
+#faq-global-warming strong,
+#faq-Contact-Us strong {
+    color: #2E7D32;
+}
+
+#resources-section a {
+    color: #4CAF50; 
+    text-decoration: none; 
+}
+
+#resources-section a:hover {
+    text-decoration: underline;
+}
+
+#biking-emissions,
+#walking-emissions {
+    background-color: #e8f5e9; 
+    font-weight: bold; 
+    color: #2E7D32; 
+}
+
+#biking-emissions td,
+#walking-emissions td {
+    background-color: #e8f5e9;
+}
