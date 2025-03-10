@@ -103,3 +103,24 @@ table th {
 #faq-Contact-Us strong {
     color: #2E7D32;
 }
+
+#resources-section a {
+    color: #4CAF50; 
+    text-decoration: none; 
+}
+
+#resources-section a:hover {
+    text-decoration: underline;
+}
+
+#biking-emissions,
+#walking-emissions {
+    background-color: #e8f5e9; 
+    font-weight: bold; 
+    color: #2E7D32; 
+}
+
+#biking-emissions td,
+#walking-emissions td {
+    background-color: #e8f5e9;
+}
