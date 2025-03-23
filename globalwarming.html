@@ -59,10 +59,31 @@
         </ul>
       </div>
     </article>
+    <section id="global-warming-question" class="content-section">
+      <h3>Are you concerned about global warming?</h3>
+      <button id="btn-yes">Yes</button>
+      <button id="btn-no">No</button>
+      <p id="response-message" style="margin-top: 1rem; font-weight: bold;"></p>
+  </section>
+  
   </main>
   
   <footer id="main-footer">
     <p>&copy; 2025 GreenSteps</p>
 </footer>
+<script>
+  const btnYes = document.getElementById('btn-yes');
+  const btnNo = document.getElementById('btn-no');
+  const message = document.getElementById('response-message');
+
+  btnYes.addEventListener('click', () => {
+      message.innerHTML = `That's very cool you're concerned! 🌱<br> Consider donating to <a href="https://www.greenpeace.org" target="_blank">Greenpeace</a> to make a difference.`;
+  });
+
+  btnNo.addEventListener('click', () => {
+      message.textContent = `That's awful... but you should really be concerned about our planet! 🌎 We're always here if you ever change your mind.`;
+  });
+</script>
+
 </body>
 </html>
