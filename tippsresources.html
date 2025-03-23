@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tips & Resources - GreenSteps</title>
+    <title>Tips & Resources</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header id="main-header">
-        <h1 id="page-title">Tips and Resources</h1>
+    <header>
+        <h1>Tips & Resources</h1>
         <nav class="main-nav">
             <a class="nav-ink" href="index.html">Home</a>
             <a class="nav-ink" href="about.html">About</a>
@@ -19,9 +21,10 @@
         </nav>
     </header>
 
-    <main id="main-content">
+    <main>
         <section id="tips-section">
-            <h2 class="section-title">Tips</h2>
+            <h2>Tips</h2>
+            <input type="text" id="tipSearch" placeholder="Search for a tip...">
             <ul class="tips-list">
                 <li class="tip-item">Start off small by just walking short distances and gradually increase the distance.</li>
                 <li class="tip-item">Give yourself daily goals and then try to achieve them every day.</li>
@@ -36,7 +39,7 @@
         </section>
 
         <section id="resources-section">
-            <h2 class="section-title">Resources</h2>
+            <h2>Resources</h2>
             <ul class="resources-list">
                 <li class="resource-item"><a href="https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle">EPA: Greenhouse Gas Emissions from a Typical Passenger Vehicle</a></li>
                 <li class="resource-item"><a href="https://americawalks.org/">Walking community</a></li>
@@ -44,41 +47,51 @@
                 <li class="resource-item"><a href="https://www.walkscore.com/">Check how walkable your area is</a></li>
             </ul>
         </section>
-
-        <section id="emissions-section">
-            <h2 class="section-title">Emissions by Travel Mode</h2>
-            <table class="emissions-table">
-                <caption class="table-caption">Emissions by Travel Mode</caption>
-                <tr>
-                    <th class="table-header">Travel Mode</th>
-                    <th class="table-header">Emissions (g CO2 per km)</th>
-                </tr>
-                <tr>
-                    <td class="table-data">Biking</td>
-                    <td class="table-data">0</td>
-                </tr>
-                <tr>
-                    <td class="table-data">Walking</td>
-                    <td class="table-data">0</td>
-                </tr>
-                <tr>
-                    <td class="table-data">Public Transit</td>
-                    <td class="table-data">105</td>
-                </tr>
-                <tr>
-                    <td class="table-data">Personal Vehicle</td>
-                    <td class="table-data">271</td>
-                </tr>
-                <tr>
-                    <td class="table-data">Aircraft</td>
-                    <td class="table-data">285</td>
-                </tr>
-            </table>
-        </section>
     </main>
 
     <footer id="main-footer">
         <p>&copy; 2025 GreenSteps</p>
     </footer>
+
+    <script>
+        document.getElementById('tipSearch').addEventListener('input', function(event) {
+            const searchTerm = event.target.value.trim().toLowerCase();
+            const tips = document.querySelectorAll('.tip-item');
+
+            tips.forEach(tip => {
+                const tipText = tip.textContent.toLowerCase();
+
+                resetHighlights(tip);
+
+                if (searchTerm === '' || tipText.includes(searchTerm)) {
+                    tip.style.display = 'block'; 
+
+                    highlightText(tip, searchTerm);
+                } else {
+                    tip.style.display = 'none'; 
+                }
+            });
+        });
+
+        function resetHighlights(element) {
+            const highlights = element.querySelectorAll('.highlight');
+            highlights.forEach(highlight => {
+                highlight.outerHTML = highlight.innerHTML;
+            });
+        }
+
+        function highlightText(element, searchTerm) {
+            if (!searchTerm) return;
+
+            const text = element.innerHTML;
+            const regex = new RegExp(`(${searchTerm})`, 'gi');
+            const highlightedText = text.replace(regex, '<span class="highlight">$1</span>');
+            element.innerHTML = highlightedText;
+        }
+
+        document.querySelectorAll('.resources-list a').forEach(link => {
+            link.setAttribute('target', '_blank');
+        });
+    </script>
 </body>
 </html>
