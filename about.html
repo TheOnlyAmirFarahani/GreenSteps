@@ -57,5 +57,20 @@
     <footer class="main-footer">
         <p>&copy; 2025 GreenSteps</p>
     </footer>
+    <script>
+        const teamSection = document.getElementById('team-section');
+    
+        teamSection.addEventListener('click', () => {
+            const extraInfo = document.createElement('p');
+            extraInfo.className = 'section-text';
+            extraInfo.textContent = 'We’re first-year computer science students working together to raise awareness about sustainability through simple and impactful tech solutions.';
+
+            
+            teamSection.appendChild(extraInfo);
+    
+            teamSection.style.backgroundColor = '#e8f5e9';
+        });
+    </script>
+    
 </body>
 </html>
