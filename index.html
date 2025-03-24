@@ -51,10 +51,43 @@
             <h3 class="section-title">Start Your Journey Today!</h3>
             <p class="section-text">Every step you take can make a difference—for the planet and for yourself. Join GreenSteps and start tracking your impact now!</p>
         </section>
+        
     </main>
     
     <footer class="main-footer">
         <p>&copy; 2025 GreenSteps</p>
     </footer>
+    <script>
+        const benefitItems = document.querySelectorAll('.benefit-item');
+    
+        const originalTexts = [
+            'Track Your Environmental Impact',
+            'Monitor Your Health Benefits',
+            'Set Goals & Earn Rewards',
+            'Learn Sustainable Practices'
+        ];
+    
+        const detailedTexts = [
+            'By using GreenSteps, you can track exactly how much CO₂ you save by walking, biking, or using public transport instead of driving. It gives you real-time insights into your positive environmental impact.',
+            'GreenSteps calculates how many calories you burn during your eco-friendly trips, helping you stay fit while caring for the planet. Every step makes a difference for your health and the Earth!',
+            'With GreenSteps, you can set personal sustainability goals, earn achievement badges, and stay motivated as you reach new milestones in your eco-friendly journey.',
+            'GreenSteps provides easy-to-follow tips and resources for living a greener lifestyle, making sustainability simple and achievable for everyone.'
+        ];
+    
+        benefitItems.forEach((item, index) => {
+            item.addEventListener('mouseover', () => {
+                item.style.backgroundColor = '#e8f5e9';
+                item.style.color = '#2E7D32';
+                item.textContent = detailedTexts[index];
+            });
+    
+            item.addEventListener('mouseout', () => {
+                item.style.backgroundColor = '';
+                item.style.color = '';
+                item.textContent = originalTexts[index];
+            });
+        });
+    </script>
+    
 </body>
 </html>
