@@ -36,10 +36,10 @@
         <section id="features-section" class="content-section">
             <h2 class="section-title">What We Offer</h2>
             <ul class="features-list">
-                <li class="feature-item">Impact Tracking: See how much CO₂ you save and how many calories you burn with every trip.</li>
-                <li class="feature-item">Real-Time Insights: Get instant feedback to stay motivated and make informed choices.</li>
-                <li class="feature-item">Goal Setting & Achievements: Challenge yourself, track milestones, and celebrate progress.</li>
-                <li class="feature-item">Practical Sustainability Tips: Learn simple ways to adopt a greener lifestyle.</li>
+                <li class="feature-item">Impact Tracking</li>
+                <li class="feature-item">Real-Time Insights</li>
+                <li class="feature-item">Goal Setting & Achievements</li>
+                <li class="feature-item">Practical Sustainability Tips</li>
             </ul>
         </section>
 
@@ -57,18 +57,36 @@
     <footer class="main-footer">
         <p>&copy; 2025 GreenSteps</p>
     </footer>
-    <script>
-        const teamSection = document.getElementById('team-section');
-    
-        teamSection.addEventListener('click', () => {
-            const extraInfo = document.createElement('p');
-            extraInfo.className = 'section-text';
-            extraInfo.textContent = 'We’re first-year computer science students working together to raise awareness about sustainability through simple and impactful tech solutions.';
 
-            
-            teamSection.appendChild(extraInfo);
+    <script>
+        const featureItems = document.querySelectorAll('.feature-item');
     
-            teamSection.style.backgroundColor = '#e8f5e9';
+        const originalFeatureTexts = [
+            'Impact Tracking',
+            'Real-Time Insights',
+            'Goal Setting & Achievements',
+            'Practical Sustainability Tips'
+        ];
+    
+        const detailedFeatureTexts = [
+            'GreenSteps allows you to track how much CO₂ you save and how many calories you burn with every eco-friendly trip you make.',
+            'Receive real-time feedback about your sustainability choices and stay motivated to reduce your environmental footprint.',
+            'Set personal sustainability goals, track your milestones, and earn achievements as you progress towards a greener lifestyle.',
+            'GreenSteps provides practical, actionable tips to help you live more sustainably and reduce your carbon footprint.'
+        ];
+    
+        featureItems.forEach((item, index) => {
+            item.addEventListener('mouseover', () => {
+                item.style.backgroundColor = '#e8f5e9';
+                item.style.color = '#2E7D32';
+                item.textContent = detailedFeatureTexts[index];
+            });
+    
+            item.addEventListener('mouseout', () => {
+                item.style.backgroundColor = '';
+                item.style.color = '';
+                item.textContent = originalFeatureTexts[index];
+            });
         });
     </script>
     
