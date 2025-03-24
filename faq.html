@@ -5,7 +5,6 @@
     <title>FAQ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
     <header>
@@ -25,66 +24,177 @@
     <main>
         <section>
             <h2>Frequently Asked Questions</h2>
-            <ul>
-                <li><strong>What is GreenSteps?</strong>  
-                    <p>GreenSteps is an web app designed to help users adopt environmentally friendly travel routines by tracking the carbon emissions they avoid and the calories they burn by walking.</p>
+            <input type="text" id="faqSearch" class="faq-search" placeholder="Search for a question or keyword...">
+
+            <ul id="faqList">
+                <li class="faq-item">
+                    <div class="faq-question">
+                        <strong>What is GreenSteps?</strong>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>GreenSteps is a web app designed to help users adopt environmentally friendly travel routines by tracking the carbon emissions they avoid and the calories they burn by walking.</p>
+                    </div>
                 </li>
-            
-                <li><strong>How does GreenSteps work?</strong>  
-                    <p>Users input their travel details, and the app calculates the emissions they have avoided by walking instead of using other transportation methods. It also estimates the calories burned based on distance traveled.</p>
+                <li class="faq-item">
+                    <div class="faq-question">
+                        <strong>How does GreenSteps work?</strong>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Users input their travel details, and the app calculates the emissions they have avoided by walking instead of using other transportation methods. It also estimates the calories burned based on distance traveled.</p>
+                    </div>
                 </li>
-            
-                <li id="faq-log-travel">
-                    <strong>How do I log my travel details?</strong>  
-                    <p>You can log your travel details by filling out a simple form on the <strong>Ecotracker</strong>.</p>
+                <li class="faq-item" id="faq-log-travel">
+                    <div class="faq-question">
+                        <strong>How do I log my travel details?</strong>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can log your travel details by filling out a simple form on the <strong>Ecotracker</strong>.</p>
+                    </div>
                 </li>
-                <li id="faq-global-warming">
-                    <strong>How can I learn more about Global Warming?</strong>  
-                    <p>Visit The <strong>Global Warming</strong> page to learn more!</p>
+                <li class="faq-item" id="faq-global-warming">
+                    <div class="faq-question">
+                        <strong>How can I learn more about Global Warming?</strong>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Visit the <strong>Global Warming</strong> page to learn more!</p>
+                    </div>
                 </li>
-            
-                <li><strong>How often is my data updated?</strong>  
-                    <p>Your travel log updates in whenever you enter new data.</p>
+                <li class="faq-item">
+                    <div class="faq-question">
+                        <strong>How often is my data updated?</strong>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Your travel log updates whenever you enter new data.</p>
+                    </div>
                 </li>
-            
-                <li><strong>What types of achievements can I earn?</strong>  
-                    <p>GreenSteps offers various achievements based on milestones, such as:</p>
-                    <ul>
-                        <li>Walking 10,000 steps</li>
-                        <li>Avoiding 10 kg of CO₂ emissions</li>
-                    </ul>
+                <li class="faq-item">
+                    <div class="faq-question">
+                        <strong>What types of achievements can I earn?</strong>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>GreenSteps offers various achievements based on milestones, such as:</p>
+                        <ul>
+                            <li>Walking 10,000 steps</li>
+                            <li>Avoiding 10 kg of CO₂ emissions</li>
+                        </ul>
+                    </div>
                 </li>
-            
-                <li><strong>Do achievements reset over time?</strong>  
-                    <p>No, your achievements are saved and tracked as long as you use the app.</p>
+                <li class="faq-item">
+                    <div class="faq-question">
+                        <strong>Do achievements reset over time?</strong>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No, your achievements are saved and tracked as long as you use the app.</p>
+                    </div>
                 </li>
-            
-                <li><strong>Can I switch between dark mode and light mode?</strong>  
-                    <p>Yes! GreenSteps supports both dark and light modes. You can switch between them for better readability.</p>
+                <li class="faq-item">
+                    <div class="faq-question">
+                        <strong>Can I switch between dark mode and light mode?</strong>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! GreenSteps supports both dark and light modes. You can switch between them for better readability.</p>
+                    </div>
                 </li>
-            
-                <li><strong>Is my data secure?</strong>  
-                    <p>Absolutely! GreenSteps will not share your data with anyone.</p>
+                <li class="faq-item">
+                    <div class="faq-question">
+                        <strong>Is my data secure?</strong>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! GreenSteps will not share your data with anyone.</p>
+                    </div>
                 </li>
-            
-                <li id="faq-Contact-Us"><strong>Who do I contact for support?</strong>  
-                    <p>If you need help or have any questions, visit the <strong>Contact Us</strong> page for more details.</p>
+                <li class="faq-item" id="faq-Contact-Us">
+                    <div class="faq-question">
+                        <strong>Who do I contact for support?</strong>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>If you need help or have any questions, visit the <strong>Contact Us</strong> page for more details.</p>
+                    </div>
                 </li>
-            
-                <li id="faq-Contact-Us"> <strong>How do I report a bug?</strong>  
-                    <p>If you encounter any issues, visit the <strong>Contact Us</strong> page to report a bug. We appreciate your feedback.</p>
+                <li class="faq-item" id="faq-Contact-Us">
+                    <div class="faq-question">
+                        <strong>How do I report a bug?</strong>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>If you encounter any issues, visit the <strong>Contact Us</strong> page to report a bug. We appreciate your feedback.</p>
+                    </div>
                 </li>
-            
             </ul>
-            
         </section>
-
-
     </main>
+
     <footer id="main-footer">
         <p>&copy; 2025 GreenSteps</p>
     </footer>
 
-    
+    <script>
+
+const faqQuestions = document.querySelectorAll('.faq-question');
+faqQuestions.forEach(question => {
+    question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        const toggleIcon = question.querySelector('.toggle-icon');
+
+        answer.classList.toggle('show');
+
+        if (answer.classList.contains('show')) {
+            toggleIcon.textContent = '−';
+        } else {
+            toggleIcon.textContent = '+'; 
+        }
+    });
+});
+
+const faqSearch = document.getElementById('faqSearch');
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqSearch.addEventListener('input', function(event) {
+    const searchTerm = event.target.value.trim().toLowerCase();
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+
+        resetHighlights(question);
+        resetHighlights(answer);
+
+        if (searchTerm === '' || question.textContent.toLowerCase().includes(searchTerm) || answer.textContent.toLowerCase().includes(searchTerm)) {
+            item.style.display = 'block'; 
+
+            highlightText(question, searchTerm);
+            highlightText(answer, searchTerm);
+        } else {
+            item.style.display = 'none'; 
+        }
+    });
+});
+
+function resetHighlights(element) {
+    const highlights = element.querySelectorAll('.highlight');
+    highlights.forEach(highlight => {
+        highlight.outerHTML = highlight.innerHTML; 
+    });
+}
+
+function highlightText(element, searchTerm) {
+    if (!searchTerm) return;
+
+    const text = element.innerHTML;
+    const regex = new RegExp(`(${searchTerm})`, 'gi');
+    const highlightedText = text.replace(regex, '<span class="highlight">$1</span>');
+    element.innerHTML = highlightedText;
+}
+    </script>
 </body>
 </html>

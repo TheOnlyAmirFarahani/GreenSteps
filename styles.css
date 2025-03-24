@@ -10,26 +10,29 @@ body {
 header {
     background-color: #4CAF50;
     color: white;
-    padding: 1rem 0;
+    padding: 1rem;
     text-align: center;
 }
 
 header h1 {
     margin: 0;
+    font-size: 1.8rem;
 }
 
 nav.main-nav {
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     background-color: #333;
     padding: 0.5rem 0;
+    width: 100%; 
 }
 
 nav.main-nav a {
     color: white;
     text-decoration: none;
-    margin: 0 1rem;
+    margin: 0 1rem; 
     font-weight: bold;
+    padding: 0.5rem 0; 
 }
 
 nav.main-nav a:hover {
@@ -37,23 +40,24 @@ nav.main-nav a:hover {
 }
 
 main {
-    padding: 2rem;
+    padding: 1rem;
 }
 
 footer {
     background-color: #333;
-    color: rgb(255, 255, 255);
+    color: #fff;
     text-align: center;
     padding: 1rem 0;
     margin-top: 2rem;
 }
 
+h1 {
+    color: #000;
+    font-size: 2rem;
+}
+
 h2, h3 {
     color: #4CAF50;
-}
-h1 {
-    color: #000000;
-
 }
 
 p {
@@ -72,6 +76,7 @@ ul li {
     padding: 1rem;
     border-left: 5px solid #4CAF50;
 }
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -123,4 +128,489 @@ table th {
 #biking-emissions td,
 #walking-emissions td {
     background-color: #e8f5e9;
+}
+
+.quote-div {
+    background-color: #fff;
+    border-left: 5px solid #4CAF50;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.quote-div blockquote {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+    transition: all 0.3s ease;
+}
+
+.quote-div:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.quote-div:hover blockquote {
+    font-size: 1.25rem;
+    color: #222;
+}
+
+.global-warming-article {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    line-height: 1.8;
+    font-family: 'Georgia', serif;
+    color: #333;
+}
+
+.global-warming-article .author,
+.global-warming-article .date {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 0.5rem;
+}
+
+.global-warming-article h1.article-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #222;
+    font-weight: bold;
+    text-align: left;
+}
+
+.global-warming-article .quote-div {
+    background-color: #fafafa;
+    border-left: 4px solid #4CAF50;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.global-warming-article .quote-div blockquote {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.global-warming-article .quote-div:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.01);
+}
+
+.global-warming-article .quote-div:hover blockquote {
+    font-size: 1.15rem;
+}
+
+.global-warming-article .issue-text {
+    font-size: 1.05rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.global-warming-article .image-container {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.global-warming-article .image-container img {
+    width: 90%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.global-warming-article .image-container img:hover {
+    transform: scale(1.02);
+}
+
+.global-warming-article .caption {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.global-warming-article #sources {
+    margin-top: 2rem;
+}
+
+.global-warming-article .sources-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #4CAF50;
+}
+
+.global-warming-article .sources-list {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+.global-warming-article .source-item {
+    margin-bottom: 0.5rem;
+}
+
+.global-warming-article .source-item a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.global-warming-article .source-item a:hover {
+    text-decoration: underline;
+}
+
+/*for the contact us page*/
+#contact-form-section {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 1rem;
+}
+
+#contactForm label {
+    font-weight: bold;
+    text-align: left;
+    color: #333;
+    width: 100%; 
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%; 
+    max-width: 400px;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 6px rgba(76, 175, 80, 0.5);
+}
+
+#contactForm textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#contactForm button {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.8rem;
+    background: #4CAF50;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contactForm button:hover {
+    background: #45a049;
+}
+
+#contact-email-section {
+    text-align: center;
+    margin-top: 2rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#contact-email-section h2 {
+    margin-bottom: 1rem;
+}
+
+#contact-email-section a {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: #4CAF50;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#contact-email-section a:hover {
+    background: #388E3C;
+}
+
+/*for the ecotracker page*/
+.ecotracker-form-section {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#ecoTrackerForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+#ecoTrackerForm label {
+    font-weight: bold;
+    text-align: left;
+    color: #333;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+#ecoTrackerForm input,
+#ecoTrackerForm select {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+#ecoTrackerForm select {
+    background: white;
+    cursor: pointer;
+}
+
+#ecoTrackerForm input[type="number"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+#ecoTrackerForm button {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.8rem;
+    background: #4CAF50;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#ecoTrackerForm button:hover {
+    background: #45a049;
+}
+
+#result {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2E7D32;
+    margin-top: 1rem;
+}
+
+/* Achievement page */ 
+
+#achievement-section h2 {
+    color: #101110; 
+}
+
+#achievement-section {
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.achievements {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr; 
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.achievement-title {
+    font-weight: bold;
+    color: #4CAF50; 
+    font-size: 1.4rem;
+}
+
+.achievement-description {
+    font-size: 1rem;
+    color: #555; 
+    margin-top: 0.5rem;
+}
+
+.achievements dt,
+.achievements dd {
+    margin: 0;
+    padding: 0.8rem;
+    background-color: #f9f9f9; 
+    border-radius: 8px;
+    border: 1px solid #e0e0e0; 
+    transition: all 0.3s ease;
+}
+
+.achievements dt:hover,
+.achievements dd:hover {
+    background-color: #eaf4e3; 
+    transform: scale(1.02);
+}
+
+.achievements dd i {
+    font-size: 1.1rem;
+    color: #273b27; 
+}
+
+.achievements dt:hover .achievement-description,
+.achievements dd:hover .achievement-description {
+    color: #2C6F2F; 
+}
+
+#quote-div {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-left: 5px solid #4CAF50;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+blockquote {
+    font-size: 1.4rem;
+    color: #4CAF50;
+    font-style: italic;
+    margin: 0;
+}
+
+#quote-div i {
+    font-size: 1.1rem;
+    color: #777;
+    display: block;
+    margin-top: 1rem;
+}
+
+#quote-div:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.02);
+}
+
+#quote-div:hover blockquote {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+#tipSearch {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.tips-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.tip-item {
+    background: #fff;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border-left: 5px solid #4CAF50;
+    transition: all 0.3s ease;
+}
+
+.tip-item:hover {
+    background-color: #e8f5e9;
+    transform: scale(1.02);
+}
+
+.resources-list a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.resources-list a:hover {
+    text-decoration: underline;
+}
+.faq-item {
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.faq-question {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question:hover {
+    background-color: #f1f1f1;
+}
+
+.faq-answer {
+    padding: 1rem;
+    background-color: #fff;
+    display: none;
+}
+
+.faq-answer.show {
+    display: block;
+}
+
+.faq-search {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.highlight {
+    background-color: yellow; 
+    font-weight: bold;
 }
