@@ -5,7 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Contact Us</title>
+    <script src="script.js"></script>
 </head>
+<script>
+    window.onload = function()  {
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();          
+            let isValid = true;
+            const phoneNumber = document.getElementById('number');
+            if (!phoneNumber.value.trim()) {
+                alert('Phone number is required');
+                isValid = false;
+            } else if (!validatePhoneNumber(phoneNumber.value.trim())) {
+                alert('Please enter a valid phone number format xxx-xxx-xxxx)');
+                isValid = false;
+            }
+            const postalCode = document.getElementById('postal');
+            if (!postalCode.value.trim()) {
+                alert('Postal code is required');
+                isValid = false;
+            } else if (!validatePostalCode(postalCode.value.trim())) {
+                alert('Please enter a valid postal code X0X 0X0');
+                isValid = false;
+            }
+            if (isValid) {
+                alert('Form is valid');
+            }
+        });
+        function validatePhoneNumber(phoneNumber) {
+            const phoneRegex = /^\d{3}-\d{3}-\d{4}$/;
+            return phoneRegex.test(phoneNumber);
+        }
+        function validatePostalCode(postalCode) {
+            const postalRegex = /^[A-Za-z]\d[A-Za-z] \d[A-Za-z]\d$/;
+            return postalRegex.test(postalCode);
+        }
+    };
+</script>
 <body>
     <header id="main-header">
         <h1>Contact Us</h1>
@@ -28,6 +64,10 @@
                 <input type="text" id="name" required>
                 <label for="email">Email:</label>
                 <input type="email" id="email" required>
+                <label for="text">Phone Number:</label>
+                <input type="text" id="number" required>
+                <label for="postal">Postal code:</label>
+                <input type="text" id="postal" required>
                 <label for="message">Message:</label>
                 <textarea id="message" required></textarea>
                 <button type="submit">Send</button>

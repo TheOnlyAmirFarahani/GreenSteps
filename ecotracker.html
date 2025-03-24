@@ -5,7 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>EcoTracker</title>
+    <script src="script.js" defer></script>
 </head>
+<script>
+    window.onload = function()  {
+    const formEco= document.getElementById("ecoTrackerForm");
+    formEco.addEventListener("submit", function(event) {
+        event.preventDefault();
+    });
+    document.getElementById("ecoTrackerForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        const distance = parseFloat(document.getElementById("distance").value);
+        const transport = document.getElementById("transport").value;
+        if (distance <= 0) {
+            alert("Please enter a valid distance.");
+            return;
+        }
+        const ratio = {walk: 0, bike: 0, bus: 100, car: 150, airplane: 250};
+        const emissions = distance * ratio[transport] / 1000;
+        const res = document.getElementById("result");
+        res.innerHTML = `<strong>${emissions.toFixed(2)}</strong> Kilograms of emissions`;
+        if (emissions== 0) {
+            res.style.color="green";
+        } else if(emissions>0 && emissions<0.5) {
+            res.style.color="orange";
+        } else {
+            res.style.color="red";
+        }
+    });
+};
+</script>
 <body>
     <header id="main-header">
         <h1>EcoTracker</h1>
@@ -36,7 +65,7 @@
                 </select>
                 <button type="submit">Calculate</button>
             </form>
-            <p id="result"><strong>10</strong> Kilograms of emissions</p>
+            <p id="result">Once Calculated results will be shown here</p>
         </section>
     </main>
     <footer class="main-footer">
